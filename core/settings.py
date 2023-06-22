@@ -38,9 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'accounts',
+    'codes',
     'website',
+
+    # django crispy forms
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
+# twilio
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_URL = '/login/'
+# default: accounts/login/
+AUTH_USER_MODEL = 'accounts.CustomUser'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

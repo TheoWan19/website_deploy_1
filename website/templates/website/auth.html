@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Authentification{% endblock %}
+
+{% block main-content %}
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-10">
+				<form action="" autocomplete="off">
+					{% csrf_token %}
+					{{form|crispy}}
+					<button type="submit" class="btn btn-primary">Connexion</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
