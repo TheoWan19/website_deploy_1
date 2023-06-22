@@ -1,0 +1,88 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vaapparyaj | {% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="{% static 'img/logo.png' %}" width="70" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">Accueil</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Liste des Championnats
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="">Ligue 1</a></li>
+            <li><a class="dropdown-item" href="">Liga</a></li>
+            <li><a class="dropdown-item" href="">Premier Ligue</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mx-3" href="">Apropos de nous</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mx-3" href="">Contactez-nous</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Rechercher</button>
+      </form>
+    </div>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item dropdown mx-2">
+        <a class="nav-link dropdown-toggle text-white" href= '#' id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vaapparyaj</a>
+        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+          <li><a class="dropdown-item" href="#">Command</a></li>
+          <li><a class="dropdown-item" href="#">Change Password</a></li>
+          <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+        </ul>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="#">Chariot 4</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="#">Ligues 4</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="#">Connexion</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="">Enregistrer</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    {% block main-slider %}{% endblock %}
+    {% block information %}{% endblock %}
+    {% block main-content %}{% endblock %}
+
+    <footer class="container-fluid fixed-bottom bg-dark text-white text-center p-2 mt-5">
+      Copyright &copy; 2023 || Developed by : Theowan Ing.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/all.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/myscript.js'%}"></script>
+  </body>
+</html>
